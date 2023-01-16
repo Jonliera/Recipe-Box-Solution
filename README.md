@@ -1,8 +1,8 @@
-# Insert Project Name
+# House of Recipes
 
 #### By **Grace Lee, Greg Ramsower, Jonathan Liera and Remy Flores**
 
-#### **Insert Project Name**
+#### House of Recipes: Food to Die For!
 
 ## Technologies Used
 * VSCode
