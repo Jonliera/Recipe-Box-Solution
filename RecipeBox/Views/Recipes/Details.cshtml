@@ -1,0 +1,46 @@
+@{
+  Layout="_Layout";
+}
+
+@using RecipeBox.Models
+@model RecipeBox.Models.Recipe
+
+<h2>Recipe</h2>
+<hr />
+<h3>@Html.Label("Recipe Name")</h3>
+<h3>@Html.EditorFor(model => model.RecipeName)</h3>
+<h3>@Html.LabelFor(model => model.Ingredients)</h3>
+<h3>@Html.TextAreaFor(model => model.Ingredients)</h3>
+<h3>@Html.LabelFor(model => model.Instructions)</h3>
+<h3>@Html.TextAreaFor(model => model.Instructions)</h3>
+<h3>@Html.LabelFor(model => model.Ratings)</h3>
+<h3>@Html.EditorFor(model => model.Ratings)</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>This recipe does not have any tags yet!</p>
+
+  
+}
+else
+{
+  <h4>This recipe has the following tags:</h4>
+  <ul>
+  @foreach(RecipeTag join in Model.JoinEntities)
+  {
+    <li>Tag: @join.Tag.Title</li>
+    @using (Html.BeginForm("DeleteJoin", "Items"))
+    {
+      @Html.Hidden("joinId", @join.RecipeTagId)
+      <input tye="submit" value="Delete" />
+    }
+  }
+  </ul>
+}
+
+
+<div class="">
+  <header>Welcome Navi:</header>
+  <br>
+  <span>@Html.ActionLink("Back to List", "Index")</span>
+</div>
