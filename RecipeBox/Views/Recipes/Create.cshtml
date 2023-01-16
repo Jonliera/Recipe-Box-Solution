@@ -1,0 +1,26 @@
+@{
+  Layout="_Layout";
+}
+
+@model RecipeBox.Models.Recipe
+
+<h2>Add a Recipe</h2>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.RecipeName)
+  @Html.TextBoxFor(model => model.RecipeName)
+  <br>
+  @Html.LabelFor(model => model.Ingredients)
+  @Html.TextAreaFor(m => m.Ingredients)
+  <br>
+  @Html.LabelFor(m => m.Instructions)
+  @Html.TextAreaFor(m => m.Instructions)
+}
+
+<div class="">
+  <header>Welcome Navi:</header>
+  <br>
+  <span>@Html.ActionLink("Recipe List", "Index", "Index")</span>
+  <br>
+  <span>@Html.ActionLink("Home", "Index", "Home")</span>
+</div>
