@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-<h1>House of Recepies</h1>
+<h1>House of Recipes</h1>
 <h3>They're to die for!</h3>
 
 <div class="">
@@ -13,4 +13,12 @@
   <span>@Html.ActionLink("Check out Tags", "Index", "Tags")</span>
   <br>
   <span>@Html.ActionLink("Create an account", "Index", "Account")</span>
+
+
+
+  <p>Please Log Out @User.Identity.Name!</p>
+  @using (Html.BeginForm("LogOff", "Account"))
+  {
+    <input type="submit" class="btn btn-primary" value="Log out" />
+  }
 </div>

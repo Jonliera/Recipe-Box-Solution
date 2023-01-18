@@ -11,7 +11,7 @@
       crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
@@ -19,6 +19,20 @@
       <div class="outside">
         <div class="first_inner_div">
           @RenderBody()
+          <div class="navibar">
+          <!-- navi should have
+          `home button
+          `login button
+          `regis button
+          `about me button -->
+          
+            <div>
+              <span>@Html.ActionLink("Home", "Index", "Home")</span>
+              <span>@Html.ActionLink("Account", "Login", "Account")</span>
+              <span>@Html.ActionLink("Account", "Register", "Account")</span>
+              <span>@Html.ActionLink("Home", "About", "Home")</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

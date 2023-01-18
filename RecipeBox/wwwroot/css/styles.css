@@ -1,7 +1,9 @@
-.validate {
-  font-family: 'Courier New', Courier, monospace;
+body {
+  background-image: url("../img/background2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(164, 207, 239);
 }
 
-.validate:hover {
-  content: "Test - Check";
-}
