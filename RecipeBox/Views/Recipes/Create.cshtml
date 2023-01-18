@@ -9,12 +9,17 @@
 {
   @Html.LabelFor(model => model.RecipeName)
   @Html.TextBoxFor(model => model.RecipeName)
-  <br>
+  <br />
   @Html.LabelFor(model => model.Ingredients)
   @Html.TextAreaFor(m => m.Ingredients)
-  <br>
+  <br />
   @Html.LabelFor(m => m.Instructions)
   @Html.TextAreaFor(m => m.Instructions)
+  <br /> 
+  @Html.LabelFor(model => model.Rating)
+  @Html.TextBoxFor(model => model.Rating)
+  
+  <input type="submit" value="Add new recipe" class="btn btn-default" />
 }
 
 <div class="">

@@ -7,14 +7,10 @@
 
 <h2>Recipe</h2>
 <hr />
-<h3>@Html.Label("Recipe Name")</h3>
-<h3>@Html.EditorFor(model => model.RecipeName)</h3>
-<h3>@Html.LabelFor(model => model.Ingredients)</h3>
-<h3>@Html.TextAreaFor(model => model.Ingredients)</h3>
-<h3>@Html.LabelFor(model => model.Instructions)</h3>
-<h3>@Html.TextAreaFor(model => model.Instructions)</h3>
-<h3>@Html.LabelFor(model => model.Ratings)</h3>
-<h3>@Html.EditorFor(model => model.Ratings)</h3>
+<h3>@Html.DisplayNameFor(model => model.RecipeName): @Html.DisplayFor(model => model.RecipeName)</h3>
+<h3>@Html.DisplayNameFor(model => model.Ingredients): @Html.DisplayFor(model => model.Ingredients)</h3>
+<h3>@Html.DisplayNameFor(model => model.Instructions): @Html.DisplayFor(model => model.Instructions)</h3>
+<h3>@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating)</h3>
 
 @if(@Model.JoinEntities.Count == 0)
 {

@@ -1,0 +1,7 @@
+.validate {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.validate:hover {
+  content: "Test - Check";
+}

@@ -20,7 +20,7 @@
   @Html.TextBoxFor(user => user.Email)
 
   @Html.LabelFor(user=> user.Password)
-  @Html.EditorFor(user=> user.Password)
+  @Html.EditorFor(user=> user.Password, new { @class = "validate"})
 
   @Html.LabelFor(user=> user.ConfirmPassword)
   @Html.EditorFor(user=> user.ConfirmPassword)
