@@ -6,4 +6,53 @@ body {
   background-repeat: no-repeat;
   background-color: rgb(164, 207, 239);
 }
+.outside {
 
+}
+
+.first_inner_div{
+  margin-top: 7rem;
+  width: 650px;
+  height: 550px;
+  border-radius: 5px;
+  box-shadow: 0 4.5px 12px rgb(24, 22, 22), 0 4.5px 12px rgb(24, 22, 22);
+}
+
+.lifesuckincss{
+  padding: 25px;
+}
+
+.navigation_bar {
+  margin-top: 100px;
+  width: 650px;
+  height: 90px;
+  margin-left: 200px;
+/*   position: fixed;
+  margin-top: 2rem;
+  margin-left: 25rem;
+  width: 39.5%;
+  height: 10%; */
+  background: #383C2Fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 4.5px 12px rgb(24, 22, 22), 0 4.5px 12px rgb(24, 22, 22);
+}
+
+.navigation_bar header {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  line-height: 4.5rem;
+  background: wheat;
+  user-select: none;
+  border-radius: 2px;
+}
+
+.link {
+  font-size: 1rem;
+  color: white;
+  padding-top: 40px;
+  border-top: 1px solid black;
+}

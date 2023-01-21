@@ -28,5 +28,11 @@ namespace RecipeBox.Controllers
         // model.Add("recipes", recipes);
         return View();
       }
+
+      // [HttpGet("/About")]
+      public ActionResult About()
+      {
+        return View();
+      }
      }
 }
