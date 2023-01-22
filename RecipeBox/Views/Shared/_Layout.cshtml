@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Student Registrar</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <!-- ^^^^ this line of code helps when it comes to changes of screen type ^^^^ -->
+    <title>Recipe Box</title>
     <link 
       rel="stylesheet" 
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
@@ -18,20 +19,36 @@
     <div class="container">
       <div class="outside">
         <div class="first_inner_div">
-          <div class="lifesuckincss">
+          <div class="Second_inner_di">
           @RenderBody()
           </div>
         </div>
       </div>
     </div>
 
-    <div class="outer_navigation_bar">
-      <div class="navigation_bar">
-        <header>:]</header>
-        <span class="link">@Html.ActionLink("Home", "Index", "Home")</span>
-        <span class="link">@Html.ActionLink("Login", "Login", "Account")</span>
-        <span class="link">@Html.ActionLink("Register", "Register", "Account")</span>
-        <span class="link">@Html.ActionLink("Contact", "About", "Home")</span>
+    <div class="container">
+      <div class="outer_navigation_bar">
+        <div class="navigation_bar">
+          <header>:]</header>
+          @if (User.Identity.IsAuthenticated) {
+            <span class="link">@Html.ActionLink("Home", "Index", "Home")</span>
+            <span class="link">@Html.ActionLink("Contact", "About", "Home")</span>
+            <span>
+              <p>  @User.Identity.Name</p> 
+              @using (Html.BeginForm("LogOff", "Account"))
+              {
+                <input type="submit" class="btn btn-primary" value="Log out" /> 
+              }
+            </span>
+          }
+          else 
+          {
+            <span class="link">@Html.ActionLink("Home", "Index", "Home")</span>
+            <span class="link">@Html.ActionLink("Login", "Login", "Account")</span>
+            <span class="link">@Html.ActionLink("Register", "Register", "Account")</span>
+            <span class="link">@Html.ActionLink("Contact", "About", "Home")</span>
+          } 
+        </div>
       </div>
     </div>
   </body>

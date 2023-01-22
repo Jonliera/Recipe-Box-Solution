@@ -6,32 +6,39 @@ body {
   background-repeat: no-repeat;
   background-color: rgb(164, 207, 239);
 }
-.outside {
 
+.outside {
+  display: flex;
 }
 
-.first_inner_div{
+.first_inner_div {
+  /* display: center ; */
   margin-top: 7rem;
   width: 650px;
   height: 550px;
   border-radius: 5px;
-  box-shadow: 0 4.5px 12px rgb(24, 22, 22), 0 4.5px 12px rgb(24, 22, 22);
+  box-shadow: 0 4.5px 12px rgb(24, 22, 22), 0 4.5
+
+.second_inner_div {
+  
+} 
+12px rgb(24, 22, 22);
 }
 
-.lifesuckincss{
-  padding: 25px;
+
+
+.outer_navigation_bar {
+  display: flex;
+}
+
+header {
+  /* flex-grow: 0; */
 }
 
 .navigation_bar {
-  margin-top: 100px;
+  margin-top: 2rem;
   width: 650px;
   height: 90px;
-  margin-left: 200px;
-/*   position: fixed;
-  margin-top: 2rem;
-  margin-left: 25rem;
-  width: 39.5%;
-  height: 10%; */
   background: #383C2Fff;
   display: flex;
   flex-direction: row;
@@ -49,6 +56,12 @@ body {
   user-select: none;
   border-radius: 2px;
 }
+
+.navigation_bar .link {
+  font-size: large;
+  padding-top: 2rem;
+}
+
 
 .link {
   font-size: 1rem;
