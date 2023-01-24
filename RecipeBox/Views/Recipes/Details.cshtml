@@ -33,7 +33,8 @@ else
 }
 
 <div class="">
-  <header>Welcome Navi:</header>
   <br>
   <span>@Html.ActionLink("Back to Recipe List", "Index")</span>
+  <p>@Html.ActionLink("Add a Tag to Recipe", "AddTag", new { id = Model.RecipeId })</p>
+  <p>@Html.ActionLink("Edit Recipe", "Edit", new { id = Model.RecipeId})</p>
 </div>

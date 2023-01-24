@@ -9,6 +9,7 @@
 <h2>Register a new user</h2>
 <hr />
 
+<div class="everything">
 @if(!ViewData.ModelState.IsValid)
 {
   @Html.ValidationSummary("Please fix the following error(s) and then resubmit the form:")
@@ -27,5 +28,6 @@
 
     <input type="submit" value="Register" />
   }
-
-<p>@Html.ActionLink("Back to Accounts page", "Index")</p>
+</div>
+<br>
+<span>@Html.ActionLink("Back to Accounts spanage", "Index")</p>

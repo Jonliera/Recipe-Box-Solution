@@ -19,7 +19,7 @@
     <div class="container">
       <div class="outside">
         <div class="first_inner_div">
-          <div class="Second_inner_di">
+          <div class="second_inner_div">
           @RenderBody()
           </div>
         </div>
@@ -33,8 +33,8 @@
           @if (User.Identity.IsAuthenticated) {
             <span class="link">@Html.ActionLink("Home", "Index", "Home")</span>
             <span class="link">@Html.ActionLink("Contact", "About", "Home")</span>
-            <span>
-              <p>  @User.Identity.Name</p> 
+            <span class="please_move">
+              <p>@User.Identity.Name</p> 
               @using (Html.BeginForm("LogOff", "Account"))
               {
                 <input type="submit" class="btn btn-primary" value="Log out" /> 
